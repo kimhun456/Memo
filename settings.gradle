@@ -1,0 +1,4 @@
+include ':app'
+include ':Domain'
+
+rootProject.name = "MemoApplication"

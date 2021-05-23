@@ -1,9 +1,11 @@
-package com.github.kimhun456.memoapplication
+package com.github.kimhun456.memoapplication.presentation.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.kimhun456.memoapplication.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.github.kimhun456.memoapplication.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

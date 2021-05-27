@@ -12,7 +12,6 @@ class UserRepositoryImpl @Inject constructor(
 
     override fun createUser(user: User): Completable = userDao.insertUser(user)
 
-
     override fun deleteUser(user: User): Completable {
         TODO("Not yet implemented")
     }

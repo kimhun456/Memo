@@ -11,5 +11,4 @@ abstract class LocalSourceModule {
 
     @Binds
     abstract fun provideUserDao(userDaoImpl: UserDaoImpl): UserDao
-
 }

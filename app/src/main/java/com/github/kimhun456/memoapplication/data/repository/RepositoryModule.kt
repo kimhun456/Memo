@@ -16,5 +16,4 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindsMemoRepository(impl: MemoRepositoryImpl): MemoRepository
-    
 }

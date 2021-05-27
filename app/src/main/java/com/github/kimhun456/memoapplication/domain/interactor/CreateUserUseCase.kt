@@ -10,5 +10,4 @@ class CreateUserUseCase @Inject constructor(
 ) {
 
     fun createUser(user: User): Completable = userRepository.createUser(user)
-
 }

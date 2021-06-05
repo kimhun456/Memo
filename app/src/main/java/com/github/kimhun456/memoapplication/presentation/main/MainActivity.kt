@@ -23,8 +23,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.kimhun456.memoapplication.domain.entity.Memo
-import com.github.kimhun456.memoapplication.domain.entity.user.Gender
-import com.github.kimhun456.memoapplication.domain.entity.user.User
 import com.github.kimhun456.memoapplication.presentation.theme.MaterialMemoTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -78,12 +76,11 @@ class MainActivity : AppCompatActivity() {
     @Preview
     @Composable
     fun PreviewMemoCard() {
-        val user = User("", ",", "", Gender.MAN)
         MemoCard(
             Memo(
+                id = 0L,
                 title = "title",
                 message = "Hello",
-                author = user,
                 createdTime = 0L,
                 lastModifiedTime = 0L
             )

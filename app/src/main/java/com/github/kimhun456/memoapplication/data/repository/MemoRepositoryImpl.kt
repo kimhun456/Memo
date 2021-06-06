@@ -6,6 +6,7 @@ import com.github.kimhun456.memoapplication.domain.entity.Memo
 import com.github.kimhun456.memoapplication.domain.repository.MemoRepository
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
+import timber.log.Timber
 import javax.inject.Inject
 
 class MemoRepositoryImpl @Inject constructor(
@@ -13,14 +14,17 @@ class MemoRepositoryImpl @Inject constructor(
 ) : MemoRepository {
 
     override fun createMemo(memo: Memo): Completable {
+        Timber.d("createMemo() :$memo")
         return memoDao.addMemo(Mapper.mapToMemoEntity(memo))
     }
 
     override fun modifyMemo(memo: Memo): Completable {
+        Timber.d("modifyMemo() :$memo")
         return memoDao.updateMemo(Mapper.mapToMemoEntity(memo))
     }
 
     override fun deleteMemo(memo: Memo): Completable {
+        Timber.d("deleteMemo() :$memo")
         return memoDao.removeMemo(Mapper.mapToMemoEntity(memo))
     }
 

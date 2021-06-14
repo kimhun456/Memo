@@ -8,9 +8,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.github.kimhun456.memoapplication.presentation.theme.MaterialMemoTheme
+import com.github.kimhun456.memoapplication.presentation.theme.TheMemoTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     fun MainActivityTheme(content: @Composable () -> Unit) {
-        MaterialMemoTheme {
-            Surface(color = Color.White) {
+        TheMemoTheme {
+            Surface {
                 content()
             }
         }

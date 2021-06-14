@@ -70,7 +70,7 @@ val typography = typographyFromDefaults(
     caption = TextStyle(
         fontFamily = fonts
     ),
-    overline = TextStyle(
+    overLine = TextStyle(
         letterSpacing = 0.08.em
     )
 )
@@ -88,7 +88,7 @@ fun typographyFromDefaults(
     body2: TextStyle?,
     button: TextStyle?,
     caption: TextStyle?,
-    overline: TextStyle?
+    overLine: TextStyle?
 ): Typography {
     val defaults = Typography()
     return Typography(
@@ -104,6 +104,6 @@ fun typographyFromDefaults(
         body2 = defaults.body2.merge(body2),
         button = defaults.button.merge(button),
         caption = defaults.caption.merge(caption),
-        overline = defaults.overline.merge(overline)
+        overline = defaults.overline.merge(overLine)
     )
 }

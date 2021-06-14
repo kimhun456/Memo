@@ -8,14 +8,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-    primary = DarkBlue700,
-    primaryVariant = DarkBlue600,
+    primary = DarkBlue600,
     secondary = Orange500
 )
 
 private val LightColorPalette = lightColors(
-    primary = DarkBlue800,
-    primaryVariant = DarkBlue600,
+    primary = DarkBlue600,
+    primaryVariant = DarkBlue800,
     secondary = Orange500,
     background = Color.White,
     surface = Color.White,
@@ -26,7 +25,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun MaterialMemoTheme(
+fun TheMemoTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
@@ -35,7 +34,6 @@ fun MaterialMemoTheme(
     } else {
         LightColorPalette
     }
-
     MaterialTheme(
         colors = colors,
         typography = typography,

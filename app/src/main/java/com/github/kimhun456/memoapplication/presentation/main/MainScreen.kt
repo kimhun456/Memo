@@ -21,7 +21,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.kimhun456.memoapplication.domain.entity.Memo
-import com.github.kimhun456.memoapplication.presentation.theme.Purple500
+import com.github.kimhun456.memoapplication.presentation.theme.DarkBlue800
 
 @Composable
 fun MainScreen(
@@ -64,9 +64,7 @@ fun MemoCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(10.dp)
-        // todo : onClick is not happened
-        ,
+            .padding(10.dp),
         elevation = 4.dp
     ) {
         Column(
@@ -75,7 +73,7 @@ fun MemoCard(
             Text(
                 buildAnnotatedString {
                     withStyle(
-                        style = SpanStyle(fontWeight = FontWeight.W900, color = Purple500)
+                        style = SpanStyle(fontWeight = FontWeight.W900, color = DarkBlue800)
                     ) {
                         append(memo.title)
                     }
@@ -83,6 +81,14 @@ fun MemoCard(
             )
             Text(text = memo.message)
         }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewCreateMemoButton() {
+    CreateRandomMemoButton {
+
     }
 }
 
